@@ -1,0 +1,24 @@
+# Даны три целых числа: A, B, C. Проверить истинность высказываний: "Хотя бы одно из чисел A, B, C положительное
+a, b, c = input("Введите первое число: "), input("Введите второе число: "), input("Введите третье число: ")
+while not type(a) == int:
+    try:
+        a = int(a)
+    except ValueError:
+        print("Ошибка: неправильно ввели число!")
+        a = input("Введите первое число: ")
+while not type(b) == int:
+    try:
+        b = int(b)
+    except ValueError:
+        print("Ошибка: неправильно ввели число!")
+        b = input("Введите второе число: ")
+while not type(c) == int:
+    try:
+        c = int(c)
+    except ValueError:
+        print("Ошибка: неправильно ввели число!")
+        c = input("Введите третье число: ")
+if a > 0 or b > 0 or c > 0:
+    print("В списке есть положительные числа")
+else:
+    print("Все отрицательные")
